@@ -6,10 +6,9 @@ before_script:
     - git clone https://anongit.gentoo.org/git/proj/portage.git /tmp/portage
     - cd portage && ./setup.py install && cd repoman && ./setup.py install
     - adduser -S portage && addgroup portage
+    - git clone https://gitlab.com/lramage94/gentoo.git /usr/portage
 
 test:
   stage: test
-  before_script:
-    - git clone https://gitlab.com/lramage94/gentoo.git /usr/portage
   script:
     - ARCH=x86_64 ACCEPT_KEYWORDS='' repoman -dxi full
