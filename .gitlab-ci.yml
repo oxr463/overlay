@@ -11,4 +11,4 @@ before_script:
 test:
   stage: test
   script:
-    - ARCH=x86_64 ACCEPT_KEYWORDS='' repoman -dxi full
+    - PORTDIR='/usr/portage' ARCH=x86_64 ACCEPT_KEYWORDS='' repoman -dxi full
