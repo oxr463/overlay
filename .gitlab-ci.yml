@@ -10,9 +10,16 @@ before_script:
     - adduser -S portage && addgroup portage
     - git clone https://gitlab.com/oxr463/gentoo.git /usr/portage
     - mkdir -p /var/cache/distfiles
+    - git clone https://gitlab.com/oxr463/ebuildbot.git /opt/ebuildbot
+    - chmod +x /opt/ebuildbot/scripts/build.sh
 
 test:
   stage: test
   script:
     - PORTDIR='/usr/portage' ARCH=x86_64 ACCEPT_KEYWORDS='' repoman -dxi full
-    - git diff-tree -r --name-only --diff-filter=ACMR HEAD -- '*ebuild' | awk '/ebuild/ { print }'
+
+build:
+  stage: build
+  script:
+    - /opt/ebuildbot/scripts/build.sh
+
