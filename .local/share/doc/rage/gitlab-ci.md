@@ -14,4 +14,3 @@ Timeout: 3h
 - [GitLab Runner Maximum Timeout](https://gitlab.com/help/ci/runners/README.html#setting-maximum-job-timeout-for-a-runner)
 
 - [GitLab Settings Pipeline Timeout](https://gitlab.com/help/ci/pipelines/settings#timeout)
-
