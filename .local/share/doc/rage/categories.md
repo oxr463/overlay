@@ -7,7 +7,7 @@ Currently this includes, but is not limited to the following:
 - `sys-compliance`
 - `android-*`
 
-Note: see [`profiles/categories`](../../../../profiles/categories) for the complete list.
+Note: see the `profiles/categories` file for the complete list.
 
 ## Structure
 
