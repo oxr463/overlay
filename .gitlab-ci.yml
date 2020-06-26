@@ -17,11 +17,8 @@ registry:
 
 pkgcheck:
   type: test
-  before_script:
-    - mkdir eclass
-    - git fetch origin master:refs/remotes/origin/master
   script:
-    - pkgcheck scan --commits
+    - pkgcheck scan
   allow_failure: true
 
 repoman:
